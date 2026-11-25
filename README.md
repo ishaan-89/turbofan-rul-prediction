@@ -4,7 +4,7 @@
 
 **Intelligent predictive maintenance with machine learning on NASA C-MAPSS**
 
-[![Open the live app](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://turbofan-rul-prediction.streamlit.app)
+[![Open the live app](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://turbofan-rul-prediction-system.streamlit.app)
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.7-F7931E?logo=scikitlearn&logoColor=white)
@@ -14,7 +14,7 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-dashboard-FF4B4B?logo=streamlit&logoColor=white)
 ![Tests](https://img.shields.io/badge/tests-26%20passing-2ECC9A)
 
-### 🔗 Live demo: **[turbofan-rul-prediction.streamlit.app](https://turbofan-rul-prediction.streamlit.app)**
+### 🔗 Live demo: **[turbofan-rul-prediction-system.streamlit.app](https://turbofan-rul-prediction-system.streamlit.app)**
 
 </div>
 
