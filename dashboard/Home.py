@@ -11,6 +11,8 @@ try:
 except RuntimeError as e:
     c.show_error(e)
 
+st.page_link("pages/1_Predict_Your_Engine.py", label="Predict the remaining life of your own engine: upload its sensor data", icon="🔮")
+
 st.subheader("Selected model per dataset")
 cols = st.columns(4)
 for col, d in zip(cols, info):
@@ -39,8 +41,9 @@ for col, (h, txt) in zip(st.columns(5), steps):
 
 st.subheader("Pages")
 st.markdown("""
+- **Predict Your Engine**: upload or paste your own engine sensor history and get its remaining life.
 - **Engine Prediction**: pick any official test engine and see its RUL, uncertainty, Health Index and risk.
-- **Fleet & Upload**: rank a whole fleet by risk, or upload your own engine file.
+- **Fleet & Upload**: rank NASA's whole official test fleet by risk.
 - **Model Comparison**: all 16 trained models (4 datasets × 4 algorithms) on validation and test.
 - **Explainability**: which sensors pushed a prediction up or down (SHAP).
 - **About & Limitations**: definitions, thresholds and what this prototype cannot claim.

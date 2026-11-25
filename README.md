@@ -12,9 +12,11 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-LSTM-EE4C2C?logo=pytorch&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-backend-009688?logo=fastapi&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-dashboard-FF4B4B?logo=streamlit&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-26%20passing-2ECC9A)
+![Tests](https://img.shields.io/badge/tests-30%20passing-2ECC9A)
 
 ### 🔗 Live demo: **[turbofan-rul-prediction-system.streamlit.app](https://turbofan-rul-prediction-system.streamlit.app)**
+
+**Try it with your own data → [Predict Your Engine](https://turbofan-rul-prediction-system.streamlit.app/Predict_Your_Engine)**
 
 </div>
 
@@ -46,7 +48,7 @@ and an interactive Streamlit dashboard with uncertainty ranges, a Health Index, 
 | 🌲 **16 models compared** | Linear Regression, Random Forest, XGBoost and LSTM on FD001 to FD004 |
 | 📏 **Uncertainty** | 90% prediction range from split-conformal calibration |
 | 🧠 **Explainable** | SHAP shows which sensors pushed each prediction up or down |
-| 🖥️ **Usable** | FastAPI backend + 6-page Streamlit dashboard, CSV upload, fleet ranking |
+| 🖥️ **Usable** | FastAPI backend + 7-page Streamlit dashboard: upload your own engine data, fleet ranking |
 
 ## 📊 Results on the official NASA test sets
 
@@ -93,8 +95,9 @@ flowchart LR
 | Page | What you can do |
 |---|---|
 | **Overview** | Selected model and test score for each dataset |
+| 🔮 **Predict Your Engine** | Upload or paste **your own engine's sensor history** (NASA .txt or CSV) and get remaining life, 90% range, Health Index, risk, trend and SHAP explanation for every engine; template, sample and NASA examples included |
 | **Engine Prediction** | RUL, 90% range, Health Index, risk level and the prediction as history grows |
-| **Fleet & Upload** | Rank every test engine by risk, or upload your own C-MAPSS-format file |
+| **Fleet & Upload** | Rank every official test engine by risk |
 | **Model Comparison** | Validation and test results for all 16 models |
 | **Explainability** | SHAP contributions per sensor and per feature |
 | **About & Limitations** | Definitions, uncertainty coverage and the limits of the system |
@@ -118,7 +121,7 @@ pip install -r requirements_app.txt
 uvicorn api.main:app --port 8000          # interactive docs at http://127.0.0.1:8000/docs
 set RUL_API_URL=http://127.0.0.1:8000     # macOS/Linux: export RUL_API_URL=...
 streamlit run dashboard/Home.py
-pytest -q                                 # 26 tests
+pytest -q                                 # 30 tests
 ```
 
 API endpoints include `/predict`, `/predict/file`, `/explain`, `/datasets/{fd}/fleet` and `/reports/comparison`. See [README_APP.md](README_APP.md).
@@ -131,7 +134,7 @@ src/         shared pipeline: data loading, preprocessing, features, training, p
 models/      trained models + saved preprocessing for FD001–FD004
 reports/     figures, experiment tables, validation and test results
 api/         FastAPI backend (prediction, uncertainty, Health Index, risk, SHAP)
-dashboard/   Streamlit dashboard (6 pages)
+dashboard/   Streamlit dashboard (7 pages)
 data/        NASA C-MAPSS test and RUL files used by the dashboard
 tests/       pytest suite for the API
 ```

@@ -35,7 +35,7 @@ Terminal 1: `start_api.bat` (or `uvicorn api.main:app --port 8000`). API docs at
 Terminal 2: `start_dashboard.bat` (or `streamlit run dashboard/Home.py`). Dashboard at http://localhost:8501
 
 ## 4. Test
-`run_tests.bat` (or `pytest -q`). 26 tests: the API reproduces the notebooks' official test predictions,
+`run_tests.bat` (or `pytest -q`). 30 tests: the API reproduces the notebooks' official test predictions,
 bad input is rejected (missing columns, NaN, duplicates, too-short history, unknown operating regime),
 predictions are causal, SHAP values add up to the prediction, the uncertainty range uses validation data only.
 

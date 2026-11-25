@@ -53,25 +53,6 @@ with tab_fleet:
     results_table(df, with_truth=True)
 
 with tab_upload:
-    st.markdown("Upload engine histories as a **NASA-format `.txt`** (26 space-separated columns, no header) "
-                "or a **CSV** with columns `engine_id, cycle, op_setting_1..3, sensor_1..21`. Every cycle of each engine is needed.")
-    u1, u2 = st.columns([1, 2])
-    fd_u = u1.selectbox("Dataset the engines belong to", c.DATASETS, key="up_fd",
-                        help="Choose the operating-condition family; the matching trained model is used.")
-    file = u2.file_uploader("Engine file", type=["txt", "csv"])
-    try:
-        sample = pd.concat([pd.DataFrame(c.api_get(f"/datasets/FD001/engines/{i}")["records"]) for i in (1, 2, 3)])
-        u1.download_button("Sample file (3 FD001 engines)", sample.to_csv(index=False).encode(), "sample_engines_FD001.csv", "text/csv")
-    except RuntimeError:
-        pass
-    if file is not None:
-        with st.spinner("Predicting..."):
-            try:
-                res_u = c.api_post_file("/predict/file", {"dataset": fd_u}, file.name, file.getvalue())
-            except RuntimeError as e:
-                st.error(str(e))
-                st.stop()
-        df_u = c.engines_frame(res_u)
-        st.success(f"{len(df_u)} engines predicted with {res_u['model']} in {res_u['latency_ms']:.0f} ms.")
-        st.plotly_chart(risk_bar(df_u), use_container_width=True)
-        results_table(df_u, with_truth=False)
+    st.markdown("Uploading your own engines now has its own page, with a template, an example, per-engine trend charts "
+                "and SHAP explanations.")
+    st.page_link("pages/1_Predict_Your_Engine.py", label="Go to Predict Your Engine", icon="🔮")

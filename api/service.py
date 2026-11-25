@@ -72,11 +72,16 @@ def records_to_frame(records) -> pd.DataFrame:
 def parse_upload(content: bytes) -> pd.DataFrame:
     """Accept either a raw NASA .txt file (26 space-separated columns) or a CSV with C-MAPSS headers."""
     import io
-    text = content.decode("utf-8", errors="replace")
-    first = text.strip().splitlines()[0] if text.strip() else ""
+    text = content.decode("utf-8-sig", errors="replace")          # -sig: drops the BOM Excel adds to CSVs
+    if not text.strip():
+        raise InputError("The file is empty.")
+    first = text.strip().splitlines()[0]
+    sep = "," if "," in first else (";" if ";" in first else r"\s+")
     if "engine_id" in first:
-        return records_to_frame(pd.read_csv(io.StringIO(text)))
-    df = pd.read_csv(io.StringIO(text), sep=r"\s+", header=None)
+        df = pd.read_csv(io.StringIO(text), sep=sep)
+        df.columns = [str(col).strip() for col in df.columns]
+        return records_to_frame(df)
+    df = pd.read_csv(io.StringIO(text), sep=sep, header=None).dropna(axis=1, how="all")
     if df.shape[1] != len(COLUMNS):
         raise InputError(f"Expected {len(COLUMNS)} columns (NASA format) or a CSV with headers; got {df.shape[1]} columns.")
     df.columns = COLUMNS

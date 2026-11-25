@@ -94,6 +94,24 @@ def test_file_upload_nasa_txt_format():
     assert r.json()["engines"][0]["engine_id"] == 3
 
 
+@pytest.mark.parametrize("variant", ["excel_bom_csv", "csv_no_header", "semicolon_csv"])
+def test_file_upload_common_spreadsheet_formats_match_txt(variant):
+    df = pd.DataFrame(engine_records("FD001", 5))[COLUMNS]
+    ref = client.post("/predict/file", data={"dataset": "FD001"},
+                      files={"file": ("x.txt", df.to_csv(sep=" ", header=False, index=False).encode())}).json()
+    body = {"excel_bom_csv": df.to_csv(index=False).encode("utf-8-sig"),
+            "csv_no_header": df.to_csv(index=False, header=False).encode(),
+            "semicolon_csv": df.to_csv(index=False, sep=";").encode()}[variant]
+    r = client.post("/predict/file", data={"dataset": "FD001"}, files={"file": ("x.csv", body)})
+    assert r.status_code == 200, r.text
+    assert r.json()["engines"][0]["predicted_rul"] == ref["engines"][0]["predicted_rul"]
+
+
+def test_empty_upload_rejected():
+    r = client.post("/predict/file", data={"dataset": "FD001"}, files={"file": ("x.csv", b"  \n")})
+    assert r.status_code == 422
+
+
 # ----------------------------------------------------------------- bad input is rejected, never guessed
 def test_missing_column_rejected():
     recs = engine_records()
