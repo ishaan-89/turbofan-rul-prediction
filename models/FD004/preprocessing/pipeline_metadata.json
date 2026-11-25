@@ -1,0 +1,42 @@
+{
+  "dataset": "FD004",
+  "kind": "regime",
+  "scaler": "standard, fitted separately per operating regime",
+  "feature_cols": [
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_17",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "dropped_features": {
+    "op_setting_1": "operational setting (used only to identify the operating regime)",
+    "op_setting_2": "operational setting (used only to identify the operating regime)",
+    "op_setting_3": "operational setting (used only to identify the operating regime)",
+    "sensor_1": "constant within every operating regime",
+    "sensor_5": "constant within every operating regime",
+    "sensor_6": "excluded by validation feature-set experiment",
+    "sensor_10": "excluded by validation feature-set experiment",
+    "sensor_16": "at most 2 distinct values within any regime",
+    "sensor_18": "constant within every operating regime",
+    "sensor_19": "constant within every operating regime"
+  },
+  "rul_cap": 100,
+  "rul_cap_meaning": "predictions near 100 mean 'RUL >= 100 cycles (healthy)'",
+  "prediction_postprocessing": "clip predictions to >= 0",
+  "min_history": 19,
+  "max_lstm_seq_len": 19,
+  "split_file": "data/processed/FD004/split.json",
+  "val_cut_points_file": "data/processed/FD004/val_cut_points.csv",
+  "fit_on": "199 training engines (seed 42)",
+  "metric_sign_convention": "d = predicted - true; d > 0 is late (dangerous)"
+}

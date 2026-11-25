@@ -1,0 +1,20 @@
+{
+  "dataset": "FD001",
+  "selected_model": "XGBoost",
+  "n_engines": 100,
+  "selected_model_test_metrics": {
+    "MAE": 10.624859461784363,
+    "RMSE": 14.223341805279054,
+    "NASA score": 282.6187861362656,
+    "Bias": 0.17135992527008057,
+    "RMSE (true \u2264125)": 12.479133329608022
+  },
+  "reference_models_test_rmse": {
+    "Linear Regression": 19.876566483970933,
+    "Random Forest": 13.779314862679435,
+    "XGBoost": 14.223341805279054,
+    "LSTM": 16.591753760835545
+  },
+  "evaluated_at_utc": "2026-11-25T06:50:02+00:00",
+  "note": "Reference models were not used for selection; selection frozen in models/FD001/selected_model.json"
+}

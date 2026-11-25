@@ -1,0 +1,5 @@
+Dataset,Conditions,Fault modes,Train/val engines,Scaling,Sensors,RUL cap,Tabular window,Tabular features,LSTM input,Selected model
+FD001,1,1,80/20,global,14,125,30,57,30×14,XGBoost
+FD002,6,1,208/52,per-regime,14,125,200,57,21×28 (+means),Random Forest
+FD003,1,2,80/20,global,14,125,30,57,30×28 (+means),Random Forest
+FD004,6,2,199/50,per-regime,14,100,200,57,19×28 (+means),Random Forest

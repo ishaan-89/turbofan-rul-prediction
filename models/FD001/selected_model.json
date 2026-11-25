@@ -1,0 +1,38 @@
+{
+  "dataset": "FD001",
+  "selected_model": "XGBoost",
+  "model_dir": "xgboost",
+  "rule": "min validation RMSE(true RUL<=125); ties within 0.5 broken by NASA score, then size, then speed",
+  "validation_metrics": {
+    "MAE (\u2264125)": 10.42435920939726,
+    "RMSE (\u2264125)": 13.673282491271117,
+    "NASA (\u2264125)": 451.2618341196855,
+    "Bias (\u2264125)": 3.994320208730261,
+    "RMSE (all 200)": 37.728932843093325,
+    "Train time (s)": 0.476596033000078,
+    "Tuning time (s)": 5.265812765999954,
+    "CPU inference, model only (ms/200)": 8.790164000004097,
+    "CPU end-to-end (ms/200)": 891.0464739999782,
+    "Model size (MB)": 0.633068
+  },
+  "candidates": {
+    "Linear Regression": {
+      "RMSE_le125": 20.259230439979863,
+      "NASA_le125": 1250.6282348147788
+    },
+    "Random Forest": {
+      "RMSE_le125": 13.985652150314834,
+      "NASA_le125": 481.6105205124429
+    },
+    "XGBoost": {
+      "RMSE_le125": 13.673282491271117,
+      "NASA_le125": 451.2618341196855
+    },
+    "LSTM": {
+      "RMSE_le125": 15.95060222451409,
+      "NASA_le125": 1003.0541815024478
+    }
+  },
+  "frozen_at_utc": "2026-11-25T06:49:48+00:00",
+  "test_set_seen_before_selection": false
+}

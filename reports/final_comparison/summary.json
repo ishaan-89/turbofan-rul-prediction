@@ -1,0 +1,109 @@
+{
+  "datasets": {
+    "FD001": {
+      "Conditions": 1,
+      "Fault modes": 1,
+      "Train/val engines": "80/20",
+      "Scaling": "global",
+      "Sensors": 14,
+      "RUL cap": 125,
+      "Tabular window": 30,
+      "Tabular features": 57,
+      "LSTM input": "30\u00d714",
+      "Selected model": "XGBoost",
+      "selected_model": "XGBoost",
+      "validation_rmse_le_cap": 13.67,
+      "test_rmse_le_cap": 12.48,
+      "test_rmse_le100_common": 12.02,
+      "test_rmse_all": 14.22,
+      "test_mae": 10.62,
+      "test_nasa": 282.6,
+      "test_bias": 0.17,
+      "all_models_test_rmse_le_cap": {
+        "Linear Regression": 18.07,
+        "Random Forest": 11.81,
+        "XGBoost": 12.48,
+        "LSTM": 14.73
+      }
+    },
+    "FD002": {
+      "Conditions": 6,
+      "Fault modes": 1,
+      "Train/val engines": "208/52",
+      "Scaling": "per-regime",
+      "Sensors": 14,
+      "RUL cap": 125,
+      "Tabular window": 200,
+      "Tabular features": 57,
+      "LSTM input": "21\u00d728 (+means)",
+      "Selected model": "Random Forest",
+      "selected_model": "Random Forest",
+      "validation_rmse_le_cap": 10.86,
+      "test_rmse_le_cap": 11.37,
+      "test_rmse_le100_common": 10.75,
+      "test_rmse_all": 23.19,
+      "test_mae": 14.74,
+      "test_nasa": 3884.8,
+      "test_bias": -7.31,
+      "all_models_test_rmse_le_cap": {
+        "Linear Regression": 17.69,
+        "Random Forest": 11.37,
+        "XGBoost": 10.57,
+        "LSTM": 14.94
+      }
+    },
+    "FD003": {
+      "Conditions": 1,
+      "Fault modes": 2,
+      "Train/val engines": "80/20",
+      "Scaling": "global",
+      "Sensors": 14,
+      "RUL cap": 125,
+      "Tabular window": 30,
+      "Tabular features": 57,
+      "LSTM input": "30\u00d728 (+means)",
+      "Selected model": "Random Forest",
+      "selected_model": "Random Forest",
+      "validation_rmse_le_cap": 12.52,
+      "test_rmse_le_cap": 13.79,
+      "test_rmse_le100_common": 14.19,
+      "test_rmse_all": 15.46,
+      "test_mae": 11.18,
+      "test_nasa": 515.3,
+      "test_bias": 1.45,
+      "all_models_test_rmse_le_cap": {
+        "Linear Regression": 18.21,
+        "Random Forest": 13.79,
+        "XGBoost": 11.72,
+        "LSTM": 12.08
+      }
+    },
+    "FD004": {
+      "Conditions": 6,
+      "Fault modes": 2,
+      "Train/val engines": "199/50",
+      "Scaling": "per-regime",
+      "Sensors": 14,
+      "RUL cap": 100,
+      "Tabular window": 200,
+      "Tabular features": 57,
+      "LSTM input": "19\u00d728 (+means)",
+      "Selected model": "Random Forest",
+      "selected_model": "Random Forest",
+      "validation_rmse_le_cap": 10.43,
+      "test_rmse_le_cap": 8.95,
+      "test_rmse_le100_common": 8.95,
+      "test_rmse_all": 33.51,
+      "test_mae": 21.84,
+      "test_nasa": 16165.8,
+      "test_bias": -16.59,
+      "all_models_test_rmse_le_cap": {
+        "Linear Regression": 16.24,
+        "Random Forest": 8.95,
+        "XGBoost": 8.83,
+        "LSTM": 12.68
+      }
+    }
+  },
+  "note": "Test sets evaluated once per dataset after freezing the selection; truth = uncapped RUL."
+}

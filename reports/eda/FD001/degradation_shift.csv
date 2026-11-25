@@ -1,0 +1,17 @@
+,shift_in_early_std_units,direction
+op_setting_1,0.009931477260827382,rises toward failure
+op_setting_2,0.033498622639283285,rises toward failure
+sensor_2,2.8803283667500965,rises toward failure
+sensor_3,2.8810026675185543,rises toward failure
+sensor_4,3.7377525366657633,rises toward failure
+sensor_7,-3.3839087230740885,falls toward failure
+sensor_8,2.625006815568865,rises toward failure
+sensor_9,4.217561379555814,rises toward failure
+sensor_11,3.7930568050935,rises toward failure
+sensor_12,-3.538760240689161,falls toward failure
+sensor_13,2.706846545123961,rises toward failure
+sensor_14,3.1325830693636996,rises toward failure
+sensor_15,3.3169135546334854,rises toward failure
+sensor_17,2.9938157659802695,rises toward failure
+sensor_20,-3.1940185937598455,falls toward failure
+sensor_21,-3.1505821943715833,falls toward failure

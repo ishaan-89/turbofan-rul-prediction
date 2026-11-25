@@ -1,0 +1,22 @@
+,raw_n_unique,max_n_unique_within_regime,variance_explained_by_regime_%,flag
+sensor_1,6,1,100.0,CONSTANT
+sensor_2,1704,308,99.98337975735711,variable
+sensor_3,13558,3032,99.62933799883507,variable
+sensor_4,17353,3844,99.44506064474655,variable
+sensor_5,6,1,100.0,CONSTANT
+sensor_6,46,12,99.99920642284708,variable
+sensor_7,5926,1533,99.97974058837755,variable
+sensor_8,1038,237,99.999791776667,variable
+sensor_9,25297,5765,99.7235919650738,variable
+sensor_10,21,6,99.84392307731713,variable
+sensor_11,737,164,99.25468849681548,variable
+sensor_12,5627,1460,99.97982701252056,variable
+sensor_13,483,255,99.9997026633674,variable
+sensor_14,15938,5441,96.77942279864104,variable
+sensor_15,11915,3266,99.19701522392079,variable
+sensor_16,2,2,89.71141833054715,QUANTISED (<3 values)
+sensor_17,54,13,99.65562037560257,variable
+sensor_18,6,1,100.0,CONSTANT
+sensor_19,2,1,100.0,CONSTANT
+sensor_20,652,159,99.96956354610921,variable
+sensor_21,21574,4684,99.96966118208175,variable

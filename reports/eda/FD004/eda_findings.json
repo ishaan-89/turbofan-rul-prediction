@@ -1,0 +1,73 @@
+{
+  "dataset": "FD004",
+  "n_train_engines": 249,
+  "n_test_engines": 248,
+  "train_lifetime_min": 128,
+  "train_lifetime_max": 543,
+  "train_lifetime_median": 234.0,
+  "test_observed_min": 19,
+  "test_engines_below_21": 4,
+  "test_engines_below_30": 11,
+  "n_regimes": 6,
+  "regime_change_rate": 0.821,
+  "constant": [
+    "sensor_1",
+    "sensor_5",
+    "sensor_18",
+    "sensor_19"
+  ],
+  "quantised": [
+    "sensor_16"
+  ],
+  "variable": [
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_6",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_10",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_17",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "corr_normalised": {
+    "sensor_11": -0.688,
+    "sensor_4": -0.653,
+    "sensor_17": -0.607,
+    "sensor_3": -0.584,
+    "sensor_2": -0.531,
+    "sensor_9": -0.524,
+    "sensor_13": -0.487,
+    "sensor_8": -0.486,
+    "sensor_14": -0.45,
+    "sensor_10": -0.316,
+    "sensor_12": -0.311,
+    "sensor_7": -0.291,
+    "sensor_16": -0.255,
+    "sensor_6": -0.186,
+    "sensor_15": -0.011,
+    "sensor_21": 0.035,
+    "sensor_20": 0.035
+  },
+  "split_direction_sensors": [
+    "sensor_7",
+    "sensor_20",
+    "sensor_21",
+    "sensor_12",
+    "sensor_10",
+    "sensor_15",
+    "sensor_14"
+  ],
+  "fault_groups": [
+    101,
+    148
+  ],
+  "share_rows_rul_gt_125": 0.488
+}

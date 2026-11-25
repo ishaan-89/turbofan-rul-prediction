@@ -1,0 +1,14 @@
+{
+  "scaler_decision": "LR/RF/XGB are scale-invariant (verified: identical LR predictions); StandardScaler chosen for LSTM, bell-shaped features, robustness to range extremes",
+  "cap_candidates": [
+    "none",
+    100,
+    125,
+    150
+  ],
+  "chosen_cap": 125,
+  "selection_criterion": "RMSE / NASA / bias on test-like validation points with true RUL <= 125",
+  "results_file": "reports/preprocessing/FD001/rul_cap_experiment.csv",
+  "trade_off_acknowledged": "capped models underestimate engines with true RUL > cap",
+  "official_test_labels": "not used"
+}

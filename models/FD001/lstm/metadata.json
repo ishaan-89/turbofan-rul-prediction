@@ -1,0 +1,57 @@
+{
+  "dataset": "FD001",
+  "model": "LSTM",
+  "input": "sequence",
+  "seq_len": 30,
+  "features": [
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_17",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "n_features": 14,
+  "architecture": {
+    "hidden": 128,
+    "layers": 2,
+    "dropout": 0.2
+  },
+  "epochs": 5,
+  "training": {
+    "epochs": 60,
+    "patience": 8,
+    "lr": 0.001,
+    "batch_size": 256,
+    "seed": 42
+  },
+  "target_scaling": "RUL / 125",
+  "rul_cap": 125,
+  "train_engines": 80,
+  "train_time_s": 2.309872986999949,
+  "tuning_time_s": 23.41081470200004,
+  "validation_metrics": {
+    "RMSE_le_cap": 15.950592366957144,
+    "MAE_le_cap": 11.682030901799795,
+    "NASA_le_cap": 1003.0475542666721,
+    "bias_le_cap": 3.8972947866308925,
+    "RMSE_all": 39.65752026205819,
+    "MAE_all": 23.72560457676649,
+    "n_points": 200,
+    "n_points_le_cap": 153,
+    "train_s": 2.309872986999949,
+    "tuning_s": 23.41081470200004,
+    "infer_ms_200": 2.9531430000133696
+  },
+  "model_file": "model.pt",
+  "preprocessing_dir": "../preprocessing",
+  "feature_config": "../feature_config.json"
+}

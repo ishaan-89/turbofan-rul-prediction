@@ -1,0 +1,19 @@
+# Versions tested on Windows 11, Python 3.12.
+# IMPORTANT: scikit-learn and xgboost must match the versions that SAVED your models in Colab
+# (run `import sklearn, xgboost; print(sklearn.__version__, xgboost.__version__)` in Colab and edit below if different).
+scikit-learn==1.7.0
+xgboost==3.4.1
+torch==2.15.0
+numpy==2.3.1
+pandas==2.3.0
+joblib
+fastapi==0.165.0
+uvicorn[standard]==0.54.0
+python-multipart
+pydantic==2.14.4
+streamlit==1.67.0
+plotly==7.2.0
+requests
+shap==0.54.1
+pytest==9.2.0
+httpx==0.28.1

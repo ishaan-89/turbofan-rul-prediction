@@ -1,0 +1,20 @@
+{
+  "dataset": "FD004",
+  "selected_model": "Random Forest",
+  "n_engines": 248,
+  "selected_model_test_metrics": {
+    "MAE": 21.842877292188895,
+    "RMSE": 33.50756740136781,
+    "NASA score": 16165.82452747362,
+    "Bias": -16.585788153834077,
+    "RMSE (true \u2264100)": 8.94926201075002
+  },
+  "reference_models_test_rmse": {
+    "Linear Regression": 37.131937239866446,
+    "Random Forest": 33.50756740136781,
+    "XGBoost": 33.06765243223892,
+    "LSTM": 33.47677339771117
+  },
+  "evaluated_at_utc": "2026-11-25T09:51:46+00:00",
+  "note": "Reference models not used for selection; selection frozen in models/FD004/selected_model.json"
+}

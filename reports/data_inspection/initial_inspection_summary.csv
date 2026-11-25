@@ -1,0 +1,5 @@
+dataset,train_rows,train_cols,train_engines,train_cycles_min,train_cycles_max,train_cycles_mean,test_rows,test_engines,test_cycles_min,test_cycles_max,rul_rows,rul_min,rul_max,missing_train,missing_test,dup_rows_train,dup_rows_test,dup_engine_cycle_train,train_cycles_contiguous,test_cycles_contiguous,engine_ids_sequential,rul_matches_test_engines
+FD001,20631,26,100,128,362,206.3,13096,100,31,303,100,7,145,0,0,0,0,0,True,True,True,True
+FD002,53759,26,260,128,378,206.8,33991,259,21,367,259,6,194,0,0,0,0,0,True,True,True,True
+FD003,24720,26,100,145,525,247.2,16596,100,38,475,100,6,145,0,0,0,0,0,True,True,True,True
+FD004,61249,26,249,128,543,246.0,41214,248,19,486,248,6,195,0,0,0,0,0,True,True,True,True

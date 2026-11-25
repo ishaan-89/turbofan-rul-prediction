@@ -1,0 +1,42 @@
+{
+  "dataset": "FD003",
+  "kind": "global",
+  "scaler": "standard",
+  "feature_cols": [
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_17",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "dropped_features": {
+    "op_setting_1": "operational setting (single operating condition -> noise)",
+    "op_setting_2": "operational setting (single operating condition -> noise)",
+    "op_setting_3": "operational setting (single operating condition -> noise)",
+    "sensor_1": "not selected (constant, or Experiment B)",
+    "sensor_5": "not selected (constant, or Experiment B)",
+    "sensor_6": "not selected (constant, or Experiment B)",
+    "sensor_10": "not selected (constant, or Experiment B)",
+    "sensor_16": "not selected (constant, or Experiment B)",
+    "sensor_18": "not selected (constant, or Experiment B)",
+    "sensor_19": "not selected (constant, or Experiment B)"
+  },
+  "rul_cap": 125,
+  "rul_cap_meaning": "predictions near 125 mean 'RUL >= 125 cycles (healthy)'",
+  "prediction_postprocessing": "clip predictions to >= 0",
+  "min_history": 38,
+  "max_lstm_seq_len": 38,
+  "split_file": "data/processed/FD003/split.json",
+  "val_cut_points_file": "data/processed/FD003/val_cut_points.csv",
+  "fit_on": "80 training engines (seed 42)",
+  "metric_sign_convention": "d = predicted - true; d > 0 is late (dangerous)"
+}

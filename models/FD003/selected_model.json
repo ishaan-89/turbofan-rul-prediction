@@ -1,0 +1,38 @@
+{
+  "dataset": "FD003",
+  "selected_model": "Random Forest",
+  "model_dir": "random_forest",
+  "rule": "min validation RMSE(true RUL<=125); ties within 0.5 broken by NASA score, then size, then speed",
+  "validation_metrics": {
+    "MAE (\u2264125)": 9.345853923077698,
+    "RMSE (\u2264125)": 12.523763160490715,
+    "NASA (\u2264125)": 430.8230422735225,
+    "Bias (\u2264125)": 6.464050199088659,
+    "RMSE (all points)": 49.6754903813207,
+    "Train time (s)": 4.652265800017631,
+    "Tuning time (s)": 19.298240399977654,
+    "CPU inference, model only (ms)": 18.52160002454184,
+    "CPU end-to-end (ms)": 112.25609999382868,
+    "Model size (MB)": 11.726143
+  },
+  "candidates": {
+    "Linear Regression": {
+      "RMSE_le_cap": 19.36745988320509,
+      "NASA_le_cap": 1105.8765978417782
+    },
+    "Random Forest": {
+      "RMSE_le_cap": 12.523763160490715,
+      "NASA_le_cap": 430.8230422735225
+    },
+    "XGBoost": {
+      "RMSE_le_cap": 12.849162738415107,
+      "NASA_le_cap": 588.9615559466371
+    },
+    "LSTM": {
+      "RMSE_le_cap": 13.171283071170329,
+      "NASA_le_cap": 446.4793382782566
+    }
+  },
+  "frozen_at_utc": "2026-11-25T09:44:17+00:00",
+  "test_set_seen_before_selection": false
+}

@@ -1,0 +1,128 @@
+{
+  "dataset": "FD002",
+  "n_train_engines": 260,
+  "n_test_engines": 259,
+  "train_lifetime_min_max": [
+    128,
+    378
+  ],
+  "test_observed_min": 21,
+  "test_engines_below_30_cycles": 6,
+  "n_regimes": 6,
+  "regime_rounding": {
+    "op_setting_1": 0,
+    "op_setting_2": 2,
+    "op_setting_3": 0
+  },
+  "regime_table": [
+    {
+      "regime": 1,
+      "op_setting_1": 0.0,
+      "op_setting_2": 0.0,
+      "op_setting_3": 100.0,
+      "share": 0.15
+    },
+    {
+      "regime": 2,
+      "op_setting_1": 10.0,
+      "op_setting_2": 0.25,
+      "op_setting_3": 100.0,
+      "share": 0.151
+    },
+    {
+      "regime": 3,
+      "op_setting_1": 20.0,
+      "op_setting_2": 0.7,
+      "op_setting_3": 100.0,
+      "share": 0.151
+    },
+    {
+      "regime": 4,
+      "op_setting_1": 25.0,
+      "op_setting_2": 0.62,
+      "op_setting_3": 60.0,
+      "share": 0.149
+    },
+    {
+      "regime": 5,
+      "op_setting_1": 35.0,
+      "op_setting_2": 0.84,
+      "op_setting_3": 100.0,
+      "share": 0.15
+    },
+    {
+      "regime": 6,
+      "op_setting_1": 42.0,
+      "op_setting_2": 0.84,
+      "op_setting_3": 100.0,
+      "share": 0.25
+    }
+  ],
+  "regime_change_rate": 0.821,
+  "constant_within_regime": [
+    "sensor_1",
+    "sensor_5",
+    "sensor_18",
+    "sensor_19"
+  ],
+  "quantised_within_regime": [
+    "sensor_6",
+    "sensor_10",
+    "sensor_16"
+  ],
+  "variable_sensors": [
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_17",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "corr_with_rul_raw": {
+    "sensor_11": -0.0469,
+    "sensor_4": -0.041,
+    "sensor_15": -0.0385,
+    "sensor_17": -0.027,
+    "sensor_2": -0.0049,
+    "sensor_3": -0.0269,
+    "sensor_16": -0.0714,
+    "sensor_13": 0.0052,
+    "sensor_8": 0.0043,
+    "sensor_9": -0.0153,
+    "sensor_6": -0.0005,
+    "sensor_14": -0.0423,
+    "sensor_10": 0.0043,
+    "sensor_21": 0.0062,
+    "sensor_20": 0.0063,
+    "sensor_7": 0.0024,
+    "sensor_12": 0.0022
+  },
+  "corr_with_rul_regime_normalised": {
+    "sensor_11": -0.6936,
+    "sensor_4": -0.6619,
+    "sensor_15": -0.6504,
+    "sensor_17": -0.5793,
+    "sensor_2": -0.5671,
+    "sensor_3": -0.5549,
+    "sensor_16": -0.5508,
+    "sensor_13": -0.4127,
+    "sensor_8": -0.4117,
+    "sensor_9": -0.3547,
+    "sensor_6": -0.3364,
+    "sensor_14": -0.263,
+    "sensor_10": 0.0442,
+    "sensor_21": 0.4329,
+    "sensor_20": 0.4375,
+    "sensor_7": 0.4607,
+    "sensor_12": 0.486
+  },
+  "share_rows_rul_gt_125": 0.3906
+}

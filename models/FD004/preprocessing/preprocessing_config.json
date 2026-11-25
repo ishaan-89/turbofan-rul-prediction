@@ -1,0 +1,76 @@
+{
+  "kind": "regime",
+  "scaler": "standard (per regime)",
+  "feature_cols": [
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_17",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "dropped_features": {
+    "sensor_1": "constant within every operating regime",
+    "sensor_5": "constant within every operating regime",
+    "sensor_6": "excluded by validation feature-set experiment",
+    "sensor_10": "excluded by validation feature-set experiment",
+    "sensor_16": "at most 2 distinct values within any regime",
+    "sensor_18": "constant within every operating regime",
+    "sensor_19": "constant within every operating regime",
+    "op_setting_1": "used only to identify the operating regime",
+    "op_setting_2": "used only to identify the operating regime",
+    "op_setting_3": "used only to identify the operating regime"
+  },
+  "regime_rounding": {
+    "op_setting_1": 0,
+    "op_setting_2": 2,
+    "op_setting_3": 0
+  },
+  "regime_centers": {
+    "1": {
+      "op_setting_1": 0.001514,
+      "op_setting_2": 0.000488,
+      "op_setting_3": 100.0
+    },
+    "2": {
+      "op_setting_1": 10.002972,
+      "op_setting_2": 0.250507,
+      "op_setting_3": 100.0
+    },
+    "3": {
+      "op_setting_1": 20.002987,
+      "op_setting_2": 0.700508,
+      "op_setting_3": 100.0
+    },
+    "4": {
+      "op_setting_1": 25.003049,
+      "op_setting_2": 0.62051,
+      "op_setting_3": 60.0
+    },
+    "5": {
+      "op_setting_1": 35.003041,
+      "op_setting_2": 0.840505,
+      "op_setting_3": 100.0
+    },
+    "6": {
+      "op_setting_1": 42.002978,
+      "op_setting_2": 0.840495,
+      "op_setting_3": 100.0
+    }
+  },
+  "regime_tolerance": {
+    "op_setting_1": 0.015147,
+    "op_setting_2": 0.004535,
+    "op_setting_3": 0.001
+  },
+  "min_unique_within_regime": 3,
+  "tolerance_factor": 3.0
+}

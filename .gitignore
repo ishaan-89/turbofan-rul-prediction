@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Raw NASA data is downloaded separately
+/CMAPSSData/
+*.txt
+!requirements*.txt
+# ...except the NASA test and RUL files bundled for the hosted dashboard
+!data/CMAPSSData/*.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

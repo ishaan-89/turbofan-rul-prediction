@@ -1,0 +1,95 @@
+{
+  "dataset": "FD001",
+  "constant_features": [
+    "op_setting_3",
+    "sensor_1",
+    "sensor_5",
+    "sensor_10",
+    "sensor_16",
+    "sensor_18",
+    "sensor_19"
+  ],
+  "near_constant_features": [
+    "sensor_6"
+  ],
+  "variable_features": [
+    "op_setting_1",
+    "op_setting_2",
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_17",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "n_operating_regimes": 1,
+  "corr_with_rul_pearson": {
+    "sensor_11": -0.6962,
+    "sensor_4": -0.6789,
+    "sensor_15": -0.6427,
+    "sensor_2": -0.6065,
+    "sensor_17": -0.6062,
+    "sensor_3": -0.5845,
+    "sensor_8": -0.564,
+    "sensor_13": -0.5626,
+    "sensor_9": -0.3901,
+    "sensor_14": -0.3068,
+    "op_setting_1": -0.0032,
+    "op_setting_2": -0.0019,
+    "sensor_20": 0.6294,
+    "sensor_21": 0.6357,
+    "sensor_7": 0.6572,
+    "sensor_12": 0.672
+  },
+  "highly_correlated_pairs": [
+    [
+      "sensor_4",
+      "sensor_11",
+      0.83
+    ],
+    [
+      "sensor_4",
+      "sensor_12",
+      -0.816
+    ],
+    [
+      "sensor_7",
+      "sensor_11",
+      -0.823
+    ],
+    [
+      "sensor_7",
+      "sensor_12",
+      0.813
+    ],
+    [
+      "sensor_8",
+      "sensor_13",
+      0.826
+    ],
+    [
+      "sensor_9",
+      "sensor_14",
+      0.963
+    ],
+    [
+      "sensor_11",
+      "sensor_12",
+      -0.847
+    ]
+  ],
+  "train_lifetime_min_max": [
+    128,
+    362
+  ],
+  "test_observed_length_min": 31,
+  "share_rows_rul_gt_125": 0.3893
+}

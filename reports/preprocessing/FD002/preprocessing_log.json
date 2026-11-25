@@ -1,0 +1,21 @@
+{
+  "normalisation": "per-regime StandardScaler (Experiment A: RF RMSE<=125 15.8 vs 18.9 global, rolling features)",
+  "single_cycle_finding": "without rolling features global vs regime scaling performed about the same",
+  "feature_set": "14 variable sensors (Experiment B: adding sensor_6/16 changed RF RMSE by ~0.03)",
+  "cap_candidates": [
+    "none",
+    100,
+    125,
+    150
+  ],
+  "chosen_cap": 125,
+  "cap_trade_off": "cap 100 ~1.3 RMSE better on RUL<=125 for RF; 125 kept for horizon + consistency with FD001",
+  "min_history": 21,
+  "max_lstm_seq_len": 21,
+  "results_files": [
+    "reports/preprocessing/FD002/experiment_A_normalisation.csv",
+    "reports/preprocessing/FD002/experiment_B_feature_set.csv",
+    "reports/preprocessing/FD002/rul_cap_experiment.csv"
+  ],
+  "official_test_labels": "not used"
+}
